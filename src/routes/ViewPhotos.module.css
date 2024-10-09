@@ -1,0 +1,28 @@
+.container {
+  container-type: size;
+  container-name: resize-box;
+  display: grid;
+  overflow: hidden;
+  height: 90%;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.embed {
+  width: 100%;
+  aspect-ratio: 1.5;
+  object-fit: contain;
+  overflow: hidden;
+  box-sizing: border-box;
+  display: flex;
+  margin: auto;
+  max-height: 90%;
+  max-width: 1200px;
+}
+
+@container resize-box (aspect-ratio > 1.5) {
+  .embed {
+    width: auto;
+    height: 100%;
+  }
+}
